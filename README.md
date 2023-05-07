@@ -58,4 +58,5 @@ Docker container log management system using Kafka
     - Running watcher.py
         - Exec into the container using: `docker exec -it producer bash`
 
-        - Run `python3 /home/watcher.py`. This streams messages from the log files mentioned in `priority.json`. `watcher.py` also streams system logs which are being generated in `/var/log/failog`, `/var/log/apt/history.log`
+        - Run `python3 /home/watcher.py`. This streams messages from the log files mentioned in `priority.json`. `watcher.py` also streams system logs which are being generated in `/var/log/failog`, `/var/log/apt/history.log`. Other system log files can be added in `priority.json`.
+    

@@ -13,8 +13,8 @@ logger = logging.getLogger()
 # Setting the threshold of logger to DEBUG
 logger.setLevel(logging.NOTSET)
 
-for i in range(1, 501):
-    print(i)
+i = 0
+while True:
     error  = random.randint(0, 4)
     if error == 0:
         logger.debug(f"{i}|Harmless debug Message")
@@ -29,3 +29,4 @@ for i in range(1, 501):
 
     wait  = random.uniform(0,2)
     time.sleep(wait)
+    i += 1
