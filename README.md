@@ -29,6 +29,7 @@ Docker container log management system using Kafka
     - The consumer installs and runs mongodb where all the consumed messages are being stored.
     - Mongodb is being exposed to the host system on port 2717.
     - The stored logs can be viewed using mongodb compass with `root` as the username and `1234` as the password.
+    - Create mongo volume on the host system which is nothing but an empty folder.
     - Build Consumer Image
         
         `docker build -t consumer  -f ./Dockerfile_Consumer .`
