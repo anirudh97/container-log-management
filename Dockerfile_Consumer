@@ -1,0 +1,17 @@
+FROM mongo:latest
+RUN apt-get update && apt-get -y install curl && apt-get install -y python3 && apt-get -y install systemctl
+RUN apt-get install -y python3-pip && pip3 install kafka-python && apt-get install -y vim
+RUN apt -y install iputils-ping && apt -y install net-tools
+RUN pip3 install pymongo
+
+# EXPOSE 27017:27017
+# EXPOSE 28017: 28017
+COPY ./consumer.py /home/consumer.py
+
+ENV MONGO_INITDB_ROOT_USERNAME root
+ENV MONGO_INITDB_ROOT_PASSWORD 1234
+
+COPY ./consumer.sh /home/consumer.sh
+RUN chmod +x /home/consumer.sh
+
+# CMD ["/home/consumer.sh"]

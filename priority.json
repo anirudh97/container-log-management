@@ -1,0 +1,11 @@
+[
+    {
+        "filename" : "/home/log1.log", "priority": 1
+    },
+    {
+        "filename" : "/home/log3.log", "priority": 3
+    },
+    {
+        "filename" : "/home/log2.log", "priority": 2
+    }
+]
